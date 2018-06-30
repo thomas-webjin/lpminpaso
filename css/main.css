@@ -115,7 +115,7 @@ body a { text-decoration: none; }
   margin: 0 auto;
 }
 
-header {
+header, footer {
   margin: 0 auto;
   text-align: center;
 }
@@ -124,7 +124,8 @@ header h1 {
   width: 80%;
   margin: 16px auto;
 }
-.buttons {height: 50px;}
+
+.buttons { height: 50px; }
 
 .buttons a {
   border-radius: 2px;
@@ -151,6 +152,22 @@ header img, footer img {
   max-width: 100%;
 }
 
+footer {
+  padding: 0;
+}
+
+footer > a {
+  width: 80%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+footer .buttons {
+    text-align: center;
+  }
+}
+
 .hero-banner {
   width: 100%;
   margin: 0 auto;
@@ -159,14 +176,13 @@ header img, footer img {
 .hero-banner img {
   margin: 0;
   padding: 0;
-  width: 50%;
-  float: left;
+  width: 100%;
+  display: block;
 }
 
 section {
   clear: both;
   font-family: sans-serif;
-  /* width: 92%; */
   margin: 0 auto;
 }
 
@@ -180,60 +196,54 @@ section h2 {
   margin-top: 40px;
 }
 
-section.point {
+.point {
   background-color: #F5F5F5;
 }
 
-section.point p {
+.point > section {
+  margin: 32px auto;
+}
+
+.point p {
   font-size: 0.8em;
   padding-left: 25%;
 }
 
-section.point h3 {
+.point h3 {
   font-weight: 600;
 }
 
-section.point h3::before {
+.point h3::before {
   content: "";
-  width: 25%;
-  height: 100px;
+  width: 20%;
+  min-height: 100px;
   float: left;
+  margin-right: 5%;
 }
 
-section.point01 h3::before {
-  background: url('../img/point-01.png') left top no-repeat;
-  background-size: 75%;
+.point01 h3::before {
+  background: url('../img/point-01.png') center top no-repeat;
+  background-size: contain;
 }
 
-section.point02 h3::before {
-  background: url('../img/point-02.png') left top no-repeat;
-  background-size: 75%;
+.point02 h3::before {
+  background: url('../img/point-02.png') center top no-repeat;
+  background-size: contain;
 }
 
-section.point03 h3::before {
-  background: url('../img/point-03.png') left top no-repeat;
-  background-size: 75%;
+.point03 h3::before {
+  background: url('../img/point-03.png') center top no-repeat;
+  background-size: contain;
 }
 
 
-ul.flex-container {
+#school-list ul {
   padding: 0;
-  margin: 0;
+  margin: 0 -8px; /* -8px to fit on 360 wide phones */
   list-style-type: none;
 }
 
-.flex-container {
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; */
-}
-
-.flex-item {
-  /* flex-basis: auto;
-  flex-grow: 1;
-  width: 45%;
-  margin: 0 2% 32px;
-  font-size: 0.7em; */
+#school-list ul li {
   display: inline-block;
   width: 45%;
   margin: 0 2% 32px;
@@ -241,22 +251,21 @@ ul.flex-container {
   vertical-align: top;
 }
 
-.flex-item img {
+#school-list ul li img {
   max-width: 100%;
   margin-bottom: 16px;
 }
 
-.flex-item h3 {
+#school-list ul li h3 {
   background: transparent url('../img/icn-location.png') left top no-repeat;
   background-size: 1.25em;
   padding-left: 1.5em;
   border-bottom: 1px solid #95D2DB;
-  /* line-height: 1.5em; */
   font-size: 1.5em;
   font-weight: 800;
 }
 
-.flex-item span {
+#school-list ul li span {
   display: block;
   line-height: 1.8em;
   background-position: left center;
@@ -264,30 +273,30 @@ ul.flex-container {
   margin-bottom: 8px;
 }
 
-.flex-item .tel {
+#school-list ul li .tel {
   background-image: url('../img/icn-tel.png');
-  background-size: 1.3em;
-  padding-left: 1.5em;
-  font-size: 1.45em;
+  background-size: 24px;
+  padding-left: 32px;
+  font-size: 1.3em;
   font-weight: 800;
 }
 
-.flex-item .email {
+#school-list ul li .email {
   background-image: url('../img/icn-mail.png');
-  background-size: 1.8em;
-  padding-left: calc(1.3em + 8px);
+  background-size: 24px;
+  padding-left: 32px;
   font-size: 1.1em;
 }
 
-.flex-item .address {
+#school-list ul li .address {
   background-image: url('../img/icn-address.png');
-  background-size: 1.8em;
-  padding-left: calc(1.3em + 8px);
+  background-size: 24px;
+  padding-left: 32px;
   font-size: 1.1em;
   background-position: left top;
 }
 
-.flex-item a {
+#school-list ul li a {
   background-color: #EFB847;
   padding: 8px 6px;
   border-radius: 3px;
@@ -297,45 +306,32 @@ ul.flex-container {
   text-align: center;
 }
 
-.kyoshitsu-info {
+.school-info {
   min-height: 110px;
 }
 
-.kyoshitsu-schedule {
+#schedule {
+  margin: 32px auto;
+}
+
+.school-schedule {
   background-color: #F5F5F5;
-  width: 92%;
   border-top: 4px solid #595656;
   padding-bottom: 24px;
-  margin-top: 32px;
+  margin: 32px 0;
 }
 
-#schedule {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 32px auto;
-  /* width: 92%; */
-}
-.kyoshitsu-schedule > div {
-  /* font-size: 0; */
-}
-.kyoshitsu-schedule {
-  flex-grow: 1;
-  flex-basis: auto;
-  margin: 0 2%;
-  width: 45%
-}
-
-.kyoshitsu-schedule .kyoshitsu-name {
+.school-schedule .school-name {
   background-color: #595656;
   color: white;
   margin: 0 0 16px;
-  padding: 16px;
+  padding: 16px 8px;
   font-size: 1em;
   font-weight: 800;
   display: inline-block;
 }
 
-.kyoshitsu-schedule .tel {
+.school-schedule .tel {
   color: #595656;
   font-weight: 800;
   font-size: 1em;
@@ -347,28 +343,28 @@ ul.flex-container {
   background-position: 8px center;
 }
 
-.kyoshitsu-schedule table {
+.school-schedule table {
   margin: 0 auto;
   font-weight: 600;
   font-size: 0.8em;
   width: 92%;
 }
-.kyoshitsu-schedule table td {
+.school-schedule table td {
   background-color: white;
-  padding: 8px;
+  padding: 12px 8px;
 }
 
-.kyoshitsu-schedule table th,
-.kyoshitsu-schedule table tr td:first-of-type {
+.school-schedule table th,
+.school-schedule table tr td:first-of-type {
   background-color: #95d2db;
   color: white;
 }
 
-.kyoshitsu-schedule table small {
+.school-schedule table small {
   font-weight: 400;
 }
 
-.kyoshitsu-schedule figure {
+.school-schedule figure {
   margin: 16px auto;
   padding-top: 16px;
   border-top: 1px solid #95D2DB;
@@ -376,19 +372,19 @@ ul.flex-container {
   font-size: 0.7em;
 }
 
-.kyoshitsu-schedule figure .map-container {
+.school-schedule figure .map-container {
   background-color: #FFFFFF;
   width: 100%;
   margin-top: 16px;
 }
 
-.kyoshitsu-schedule figure .map-container iframe {
+.school-schedule figure .map-container iframe {
   border: none;
   width: 50%;
   display: inline-block;
 }
 
-.kyoshitsu-schedule figure .map-container > div {
+.school-schedule figure .map-container > div {
   display: inline-block;
   width: 45%;
   border: 1px solid #ddd;
@@ -400,85 +396,60 @@ ul.flex-container {
    Media queries
    ========================================================================== */
 
+/* Extra small screens (iPhone SE...) */
 @media screen and (max-width: 359px) {
-  .flex-item {
-    /* flex-basis: auto;
-    flex-grow: 1;
-    width: 100%;
-    margin: 0 0 32px;
-    font-size: 0.7em; */
+
+  .point h3 {
+    line-height: 1.5em;
+  }
+
+  .point p {
+    padding-left: 0;
+    clear: left;
+  }
+
+  #school-list ul li {
     width: 100%;
     margin: 0 0 32px;
     font-size: 0.7em;
   }
-}
-
-@media screen and (max-width: 680px) {
-  .kyoshitsu-schedule {
-    flex-grow: 1;
-    flex-basis: auto;
-    margin: 0;
-    width: 100%
+  .school-info {
+    float: right;
+    width: 60%;
   }
+  #school-list ul li img {
+    float: left;
+    width: 35%;
+  }
+  #school-list ul li a { clear: both; display: block; }
+
+  .school-name {
+    width: 100%;
+    padding: 16px 0 0 16px !important;
+  }
+
 }
 
 @media screen
-and (min-width: 599px)
-and (max-width: 739px) {
+and (min-width: 599px) and (max-width: 767px) {
 
-  section.point h3 { font-size: 1.2em; }
-  section.point p { font-size: 1em; }
-
-}
-
-@media screen and (min-width: 740px) {
-
-  section.point h3 { font-size: 1.4em; width: 66%; }
-  section.point p { font-size: 1.2em; width: 48%; }
-
-  section.point01 {
-    background: transparent url('../img/point-01-img.jpg') right 4% center no-repeat;
-    height: 280px;
-    padding: 60px 4%;
-    background-size: 31%
+  .point p {
+    font-size: 0.9em;
+    padding-left: 14%;
   }
-  section.point02 {
-    background: transparent url('../img/point-02-img.jpg') right 4% center no-repeat;
-    height: 280px;
-    padding: 60px 4%;
-    background-size: 31%
+  .point h3 {
+    font-weight: 600;
+    letter-spacing: 2px;
   }
-  section.point03 {
-    background: transparent url('../img/point-03-img.jpg') right 4% center no-repeat;
-    height: 280px;
-    padding: 60px 4%;
-    background-size: 31%
+  .point h3::before {
+    content: "";
+    width: 10%;
+    min-height: 90px;
+    float: left;
+    margin-right: 4%;
   }
 
-}
-
-@media screen and (min-width: 768px) {
-  .flex-item {
-    /* flex-basis: auto; */
-    width: 22%;
-    margin: 0 1% 32px;
-    font-size: 0.7em;
-  }
-}
-
-@media screen and (min-width: 600px) and (max-width:767px) {
-  .flex-item {
-    /* flex-basis: auto; */
-    width: 30%;
-    margin: 0 1% 32px;
-    font-size: 0.7em;
-  }
-}
-
-@media screen
-and (min-width: 599px) {
-
-  header h1 {
+  header h1, footer > a {
     width: 30%;
     display: inline-block;
     text-align: left;
@@ -489,33 +460,161 @@ and (min-width: 599px) {
     display: inline-block;
     text-align: right;
   }
+
+  .hero-banner img {
+    float: left;
+    display: inline;
+    width: 50%;
+  }
+
   section h2 {
     font-size: 2em;
     letter-spacing: 3px;
   }
 
-  section.point h3 {
-    font-weight: 600;
-    letter-spacing: 2px;
-  }
-  section.point01 h3::before,
-  section.point02 h3::before,
-  section.point03 h3::before {
-    background-size: 100px;
-    height: 135px;
-    width: 140px;
+  #school-list ul li {
+    width: 30%;
+    margin: 0 1% 32px;
+    font-size: 0.7em;
   }
 
-  section.point p {
-    padding-left: 140px;
-    font-weight: 300;
-    letter-spacing: 1.5px;
-  }
-
-  .kyoshitsu-name {
+  .school-name {
     width: calc(45% - 32px);
   }
 
+}
+
+@media screen and (min-width: 599px) and (max-width:679px) {
+
+  .school-schedule table { font-size: 1em; }
+  .school-schedule table td {
+    padding: 24px 8px;
+    text-align: center;
+  }
+  .map-container {
+    height: 210px;
+  }
+  .map-container iframe {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 680px) and (max-width: 767px) {
+
+  .school-schedule {
+  width: 48%;
+  display: inline-block;
+  margin: 0 0.75%;
+  }
+  .school-name {
+    width: 90%;
+    padding: 16px 5% !important;
+  }
+  .school-schedule table { font-size: 0.7em; }
+  .school-schedule table td {
+    padding: 24px 8px;
+    text-align: center;
+  }
+  .map-container {
+    height: 210px;
+  }
+  .map-container iframe {
+    height: 100%;
+  }
+
+}
+
+/* iPad and above */
+@media screen and (min-width: 768px) {
+
+  header h1, footer > a {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  .buttons {
+    width: 65%;
+    display: inline-block;
+    text-align: right;
+  }
+
+  .hero-banner img {
+    float: left;
+    display: inline;
+    width: 50%;
+  }
+
+  section h2 {
+    font-size: 2em;
+    letter-spacing: 3px;
+  }
+
+  #school-list ul li {
+    width: 23%;
+    margin: 0 0.72% 32px;
+    font-size: 0.7em;
+  }
+  .school-info {
+    min-height: 140px;
+  }
+
+  .point > section {
+    height: 280px;
+    padding: 60px 4% 0;
+  }
+  .point h3 { font-size: 1.4em; width: 70%; }
+  .point h3::before {
+    min-height: 140px;
+    margin-right: 3%;
+  }
+  .point p {
+    font-size: 1.2em !important;
+    width: 50%;
+    padding-left: 16%;
+    letter-spacing: 1.5px;
+  }
+
+  .point01 {
+    background: transparent url('../img/point-01-img.jpg') right 4% center no-repeat;
+    background-size: 30%;
+  }
+  .point02 {
+    background: transparent url('../img/point-02-img.jpg') right 4% center no-repeat;
+    background-size: 30%;
+  }
+  .point03 {
+    background: transparent url('../img/point-03-img.jpg') right 4% center no-repeat;
+    background-size: 30%;
+  }
+
+  .school-schedule {
+  width: 48%;
+  display: inline-block;
+  margin: 0 0.75%;
+  }
+  .school-name {
+    width: 36%;
+    padding: 16px 16px;
+  }
+  .school-schedule table { font-size: 1em; }
+  .school-schedule table td {
+    padding: 24px 8px;
+    text-align: center;
+  }
+  .map-container {
+    height: 210px;
+  }
+  .map-container iframe {
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  #school-list ul li {
+    font-size: 0.9em;
+  }
 }
 
 
