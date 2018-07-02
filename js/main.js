@@ -9,6 +9,7 @@ for (var i = 0; i < btn.length; i++) {
     var modal = document.getElementById(this.dataset.modal);
     // modal.style.display = "block";
     modal.classList.toggle("show-modal");
+    document.body.classList.add("modal-open");
 }, false);
 }
 
@@ -18,19 +19,14 @@ function toggleModal() {
     console.log("test");
 }
 
-// function windowOnClick(event) {
-//   if (event.target === modals) {
-//       console.log("window clicked!");
-//   }
-// }
 function windowOnClick(event) {
 	if(event.target.className=="modal show-modal"){
 		event.target.className="modal";
-    console.log("clicked");
+    document.body.classList.remove("modal-open");
 	}
 }
-console.log(modals);
-window.addEventListener("click", windowOnClick);
+window.addEventListener('click', windowOnClick);
+window.addEventListener('touchstart', windowOnClick);
 
 // $(document).on('click', '.show-modal', function(){
 //     $(this).removeClass("show-modal");

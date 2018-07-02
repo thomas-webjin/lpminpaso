@@ -104,6 +104,9 @@ body {
 }
 
 body a { text-decoration: none; }
+body.modal-open {
+  overflow: hidden;
+}
 
 .inner-wrap {
   max-width: 1000px;
@@ -211,6 +214,9 @@ section h2 {
 .point h3 {
   font-weight: 600;
 }
+.point h3 span {
+  color: #79D1B0;
+}
 
 .point h3::before {
   content: "";
@@ -238,7 +244,7 @@ section h2 {
 
 #school-list ul {
   padding: 0;
-  margin: 0 -8px; /* -8px to fit on 360 wide phones */
+  margin: 0 -16px; /* -8px to fit on 360 wide phones */
   list-style-type: none;
 }
 
@@ -295,15 +301,18 @@ section h2 {
   background-position: left top;
 }
 
-#school-list ul li a.trigger {
+#school-list ul li p.trigger {
   background-color: #EFB847;
   padding: 8px 6px;
   border-radius: 3px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
+  font-family: sans-serif;
+  font-size: 1.2em;
   display: block;
   text-align: center;
   text-decoration: none;
+  clear: both;
 }
 
 .school-info {
