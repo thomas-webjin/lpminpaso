@@ -380,16 +380,8 @@ section h2 {
 
 .school-schedule figure .map-container iframe {
   border: none;
-  width: 50%;
+  width: 100%;
   display: inline-block;
-}
-
-.school-schedule figure .map-container > div {
-  display: inline-block;
-  width: 45%;
-  border: 1px solid #ddd;
-  margin: 0 auto;
-  text-align: center;
 }
 
 /* ==========================================================================
