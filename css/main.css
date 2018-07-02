@@ -295,7 +295,7 @@ section h2 {
   background-position: left top;
 }
 
-#school-list ul li a {
+#school-list ul li a.trigger {
   background-color: #EFB847;
   padding: 8px 6px;
   border-radius: 3px;
@@ -303,6 +303,7 @@ section h2 {
   font-weight: 600;
   display: block;
   text-align: center;
+  text-decoration: none;
 }
 
 .school-info {
@@ -313,11 +314,36 @@ section h2 {
   margin: 32px auto;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 .school-schedule {
   background-color: #F5F5F5;
   border-top: 4px solid #595656;
-  padding-bottom: 24px;
-  margin: 32px 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.12), 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .school-schedule .school-name {
@@ -365,7 +391,7 @@ section h2 {
 
 .school-schedule figure {
   margin: 16px auto;
-  padding-top: 16px;
+  padding: 16px 0 0;
   border-top: 1px solid #95D2DB;
   width: 92%;
   font-size: 0.7em;
@@ -380,7 +406,7 @@ section h2 {
 .school-schedule figure .map-container iframe {
   border: none;
   width: 100%;
-  display: inline-block;
+  display: block;
 }
 
 /* ==========================================================================
@@ -414,9 +440,21 @@ section h2 {
   }
   #school-list ul li a { clear: both; display: block; }
 
+  .modal-content {
+    position: fixed;
+    bottom: 0;
+  }
+  .school-schedule {
+    border-top: none;
+  }
+  .school-schedule figure {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
   .school-name {
     width: 100%;
-    padding: 16px 0 0 16px !important;
+    padding: 16px 0 16px 16px !important;
+    margin-bottom: 0 !important;
   }
 
 }
@@ -468,7 +506,17 @@ and (min-width: 599px) and (max-width: 767px) {
     margin: 0 1% 32px;
     font-size: 0.7em;
   }
-
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    bottom: auto; /* override bottom 0 from default styles */
+    transform: translate(-50%, -50%);
+  }
+  .school-schedule {
+    width: 480px;
+  }
   .school-name {
     width: calc(45% - 32px);
   }
@@ -488,15 +536,15 @@ and (min-width: 599px) and (max-width: 767px) {
   .map-container iframe {
     height: 100%;
   }
+  .buttons {
+    width: 65%;
+    display: inline-block;
+    text-align: right !important;
+  }
 }
 
 @media screen and (min-width: 680px) and (max-width: 767px) {
 
-  .school-schedule {
-  width: 48%;
-  display: inline-block;
-  margin: 0 0.75%;
-  }
   .school-name {
     width: 90%;
     padding: 16px 5% !important;
@@ -511,6 +559,11 @@ and (min-width: 599px) and (max-width: 767px) {
   }
   .map-container iframe {
     height: 100%;
+  }
+  .buttons {
+    width: 65%;
+    display: inline-block;
+    text-align: right !important;
   }
 
 }
@@ -527,7 +580,7 @@ and (min-width: 599px) and (max-width: 767px) {
   .buttons {
     width: 65%;
     display: inline-block;
-    text-align: right;
+    text-align: right !important;
   }
 
   .hero-banner img {
@@ -578,11 +631,16 @@ and (min-width: 599px) and (max-width: 767px) {
     background: transparent url('../img/point-03-img.jpg') right 4% center no-repeat;
     background-size: 30%;
   }
-
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    bottom: auto; /* override bottom 0 from default styles */
+    transform: translate(-50%, -50%);
+  }
   .school-schedule {
-  width: 48%;
-  display: inline-block;
-  margin: 0 0.75%;
+    width: 480px;
   }
   .school-name {
     width: 36%;
@@ -618,7 +676,7 @@ and (min-width: 599px) and (max-width: 767px) {
  */
 
 .hidden {
-    display: none !important;
+    visibility: hidden !important;
 }
 
 /*

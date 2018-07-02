@@ -24,8 +24,8 @@
   <header class="outer-wrap">
     <h1><a href="#" title="みんなのパソコン倶楽部"><img src="img/logo.png" alt="みんなのパソコン倶楽部" width="" height="" /></a></h1>
     <div class="buttons">
-      <a href="#" title="無料説明会予約">無料説明会予約</a>
-      <a href="#" title="お近くの教室を探す">お近くの教室を探す</a>
+      <a href="#anchor" title="無料説明会予約">無料説明会予約</a>
+      <a href="#anchor" title="お近くの教室を探す">お近くの教室を探す</a>
     </div>
   </header>
 
@@ -51,7 +51,7 @@
   </section>
 
   <section id="school-list" class="inner-wrap">
-    <h2>まずは無料説明会へご参加下さい！</h2>
+    <h2 id="anchor">まずは無料説明会へご参加下さい！</h2>
     <p>説明会の所要時間は50分程度です。お近くの会場でいずれかの日時にご参加下さい。下記の日程でご都合が合わない方も日程調整いたしますので、各教室にお気軽にお電話下さい。</p>
     <ul>
       <li>
@@ -62,7 +62,7 @@
           <span class="address">横浜市西区戸部本町32-10</span>
         </div>
         <img src="img/kyoshitsu01.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-one" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>蕨駅前<small>教室</small></h3>
@@ -72,7 +72,7 @@
           <span class="address">埼玉県蕨市中央3丁目14-15 蕨駅前郵便局２F</span>
         </div>
         <img src="img/kyoshitsu02.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-two" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>小滝橋<small>教室</small></h3>
@@ -82,7 +82,7 @@
           <span class="address">東京都新宿区高田馬場4-41-9</span>
         </div>
         <img src="img/kyoshitsu03.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-three" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>学芸大学駅前<small>教室</small></h3>
@@ -92,7 +92,7 @@
           <span class="address">東京都目黒区鷹番2-20-17-403 号室</span>
         </div>
         <img src="img/kyoshitsu04.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-four" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
 
       <li>
@@ -103,7 +103,7 @@
           <span class="address">東京都大田区北〇〇町3-23 オリビアガーデン 202</span>
         </div>
         <img src="img/kyoshitsu05.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-five" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>与野本町<small>教室</small></h3>
@@ -113,7 +113,7 @@
           <span class="address">埼玉県さいたま市中央区本町東2-12-4 チェリーハイツ１F 東側</span>
         </div>
         <img src="img/kyoshitsu06.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-six" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>祖師谷<small>教室</small></h3>
@@ -123,7 +123,7 @@
           <span class="address">東京都世田谷区祖師谷4-23-21</span>
         </div>
         <img src="img/kyoshitsu07.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-seven" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
       <li>
         <h3>中山<small>教室</small></h3>
@@ -133,40 +133,46 @@
           <span class="address">神奈川県横浜市緑区三保町2157-3</span>
         </div>
         <img src="img/kyoshitsu08.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <a class="trigger" data-modal="modal-eight" title="説明会はこちら">＞ 説明会はこちら</a>
       </li>
     </ul>
   </section>
 
   <div id="schedule" class="inner-wrap">
     <!-- 横浜戸部駅前教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-one">
+    <section class="school-schedule modal-content">
       <div>
       <span class="school-name">横浜戸部駅前<small>教室</small></span><span class="tel">045-620-4610</span>
+      </div>
       <table><tbody>
         <tr>
           <th>日</th>
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/15</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/16</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/18</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
       </tbody></table>
       <figure>
@@ -176,9 +182,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 蕨駅前教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-two">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">蕨駅前<small>教室</small></span><span class="tel">048-229-3241</span>
       </div>
@@ -188,24 +195,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/27</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/28</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/31</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
       </table>
       <figure>
@@ -215,9 +226,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 小滝橋教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-three">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">小滝橋<small>教室</small></span><span class="tel">03-5989-1170</span>
       </div>
@@ -227,24 +239,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/22</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/23</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/25<</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
       </table>
       <figure>
@@ -254,9 +270,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 学芸大学駅前教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-four">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">学芸大学駅前<small>教室</small></span><span class="tel">03-6451-0117</span>
       </div>
@@ -266,24 +283,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/26</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/29</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/30</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
       </table>
       <figure>
@@ -293,9 +314,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 雪が谷教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-five">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">雪が谷<small>教室</small></span><span class="tel">03-6421-8480</span>
       </div>
@@ -305,24 +327,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/5</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/8</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/9</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
       </table>
       <figure>
@@ -332,9 +358,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 与野本町教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-six">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">与野本町<small>教室</small></span><span class="tel">048-767-4200</span>
       </div>
@@ -344,24 +371,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/12</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/15</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/16</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
       </table>
       <figure>
@@ -371,9 +402,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 祖師谷教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-seven">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">祖師谷<small>教室</small></span><span class="tel">03-5787-7550</span>
       </div>
@@ -383,24 +415,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/29</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/30</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>8/1</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
       </table>
       <figure>
@@ -410,9 +446,10 @@
         </div>
       </figure>
     </section>
-
+    </div>
     <!-- 中山教室 -->
-    <section class="school-schedule">
+    <div class="modal" id="modal-eight">
+    <section class="school-schedule modal-content">
       <div>
         <span class="school-name">中山<small>教室</small></span><span class="tel">045-482-7544</span>
       </div>
@@ -422,24 +459,28 @@
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/8</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>6/9</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>-</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/11</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
       </table>
       <figure>
@@ -450,14 +491,14 @@
         </div>
       </figure>
     </section>
+    </div>
   </div>
-
 
   <footer>
     <a href="#" title="みんなのパソコン倶楽部"><img src="img/logo.png" alt="みんなのパソコン倶楽部" width="" height="" /></a>
     <div class="buttons">
-      <a href="#" title="無料説明会予約">無料説明会予約</a>
-      <a href="#" title="お近くの教室を探す">お近くの教室を探す</a>
+      <a href="#anchor" title="無料説明会予約">無料説明会予約</a>
+      <a href="#anchor" title="お近くの教室を探す">お近くの教室を探す</a>
     </div>
   </footer>
 
@@ -474,7 +515,6 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-  </div>
 </body>
 
 </html>
