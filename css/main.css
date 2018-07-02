@@ -100,6 +100,7 @@ textarea {
 body {
   padding: 0;
   color: #595656;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
 }
 
 body a { text-decoration: none; }
@@ -182,14 +183,12 @@ footer .buttons {
 
 section {
   clear: both;
-  font-family: sans-serif;
   margin: 0 auto;
 }
 
 section h2 {
   text-align: center;
   padding-bottom: 20px;
-  font-family: serif;
   font-size: 1.3em;
   font-weight: 600;
   border-bottom: 1px solid #79D1B0;
