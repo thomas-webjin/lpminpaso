@@ -100,7 +100,7 @@ textarea {
 body {
   padding: 0;
   color: #595656;
-  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体";
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
 }
 
 body a { text-decoration: none; }
@@ -111,7 +111,7 @@ body.modal-open {
 .inner-wrap {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .outer-wrap {
@@ -133,20 +133,18 @@ header h1 {
 
 .buttons a {
   border-radius: 2px;
-  padding: 8px 6px 6px;
+  padding: 10px 10px 6px;
   font-family: sans-serif;
   color: white;
   font-weight: 600;
   font-size: 0.8em
 }
 
-.buttons a:first-of-type,
 .buttons a:first-of-type {
   background-color: #EFB847;
   border-bottom: 3px solid #DDA650;
 }
 
-.buttons a:last-of-type,
 .buttons a:last-of-type {
   background-color: #95D2DB;
   border-bottom: 3px solid #88BBBF;
@@ -244,21 +242,22 @@ section h2 {
 
 #school-list ul {
   padding: 0;
-  margin: 0 -16px; /* -8px to fit on 360 wide phones */
+  margin: 0;
   list-style-type: none;
+  text-align: center;
 }
 
 #school-list ul li {
   display: inline-block;
-  width: 45%;
-  margin: 0 2% 32px;
+  width: calc(45%);
+  margin: 0 1% 32px;
   font-size: 0.7em;
   vertical-align: top;
+  text-align: left;
 }
 
 #school-list ul li img {
   max-width: 100%;
-  margin-bottom: 16px;
 }
 
 #school-list ul li h3 {
@@ -497,6 +496,7 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right;
+    vertical-align: middle;
   }
 
   .hero-banner img {
@@ -549,6 +549,7 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right !important;
+    vertical-align: middle;
   }
 }
 
@@ -573,6 +574,7 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right !important;
+    vertical-align: middle;
   }
 
 }
@@ -590,6 +592,7 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right !important;
+    vertical-align: middle;
   }
 
   .hero-banner img {
