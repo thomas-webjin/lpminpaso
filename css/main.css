@@ -283,6 +283,7 @@ section h2 {
   padding-left: 32px;
   font-size: 1.3em;
   font-weight: 800;
+  color: #595656 !important;
 }
 
 #school-list ul li .email {
@@ -307,7 +308,7 @@ section h2 {
   color: white;
   font-weight: 800;
   font-family: sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -365,7 +366,7 @@ section h2 {
 }
 
 .school-schedule .tel {
-  color: #595656;
+  color: #595656 !important;
   font-weight: 800;
   font-size: 1em;
   margin: 0;
@@ -467,6 +468,7 @@ section h2 {
 
 }
 
+/* Small Tablets (Nexus etc...) */
 @media screen
 and (min-width: 599px) and (max-width: 767px) {
 
@@ -528,6 +530,8 @@ and (min-width: 599px) and (max-width: 767px) {
   }
   .school-name {
     width: calc(45% - 32px);
+    font-size: 1.2em !important;
+    text-align: center;
   }
 
 }
@@ -551,6 +555,10 @@ and (min-width: 599px) and (max-width: 767px) {
     text-align: right !important;
     vertical-align: middle;
   }
+  .school-name{
+    font-size: 1.2em !important;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 680px) and (max-width: 767px) {
@@ -558,6 +566,8 @@ and (min-width: 599px) and (max-width: 767px) {
   .school-name {
     width: 90%;
     padding: 16px 5% !important;
+    font-size: 1.2em !important;
+    text-align: center;
   }
   .school-schedule table { font-size: 0.7em; }
   .school-schedule table td {
@@ -657,6 +667,8 @@ and (min-width: 599px) and (max-width: 767px) {
   .school-name {
     width: 36%;
     padding: 16px 16px;
+    font-size: 1.2em !important;
+    text-align: center;
   }
   .school-schedule table { font-size: 1em; }
   .school-schedule table td {
