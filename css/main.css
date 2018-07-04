@@ -247,6 +247,8 @@ section h2 {
   text-align: center;
 }
 
+#school-list > p {text-align: center;}
+
 #school-list ul li {
   display: inline-block;
   width: calc(45%);
@@ -316,7 +318,7 @@ section h2 {
 }
 
 .school-info {
-  min-height: 110px;
+  min-height: 130px;
 }
 
 #schedule {
@@ -622,13 +624,15 @@ and (min-width: 599px) and (max-width: 767px) {
     font-size: 0.7em;
   }
   .school-info {
-    min-height: 140px;
+    min-height: 160px;
   }
 
   .point > section {
     height: 280px;
     padding: 60px 4% 0;
   }
+
+  .point h2 span { color: #fdc44f; }
   .point h3 { font-size: 1.4em; width: 70%; }
   .point h3::before {
     min-height: 140px;
