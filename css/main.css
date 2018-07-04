@@ -128,26 +128,45 @@ header h1 {
   width: 80%;
   margin: 16px auto;
 }
+header h1 a { text-align: center; }
+header h1 a span {
+  font-size: 0.4em;
+  font-weight: 400;
+  color: #595656;
+  text-align: center;
+  display: block;
+}
 
 .buttons { height: 50px; }
 
 .buttons a {
   border-radius: 2px;
-  padding: 10px 10px 6px;
+  padding: 16px 16px 13px;
   font-family: sans-serif;
   color: white;
   font-weight: 600;
-  font-size: 0.8em
+  font-size: 0.8em;
+  letter-spacing: 2px;
 }
 
 .buttons a:first-of-type {
   background-color: #EFB847;
   border-bottom: 3px solid #DDA650;
+  background-image: url('../img/icn-list.png');
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  padding-right: 40px;
 }
 
 .buttons a:last-of-type {
   background-color: #95D2DB;
   border-bottom: 3px solid #88BBBF;
+  background-image: url('../img/icn-map.png');
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  padding-right: 40px;
 }
 
 header img, footer img {
@@ -194,6 +213,7 @@ section h2 {
   font-weight: 600;
   border-bottom: 1px solid #79D1B0;
   margin-top: 40px;
+  font-family: serif;
 }
 
 .point {
@@ -208,13 +228,17 @@ section h2 {
   font-size: 0.8em;
   padding-left: 25%;
 }
+.point h2 img,
+#school-list h2 img { display:none; }
 
+.point h2 span { color: #fdc44f; }
 .point h3 {
   font-weight: 600;
 }
 .point h3 span {
   color: #79D1B0;
 }
+.point h3 img { display: none; }
 
 .point h3::before {
   content: "";
@@ -247,7 +271,10 @@ section h2 {
   text-align: center;
 }
 
-#school-list > p {text-align: center;}
+#school-list > p {
+  text-align: center;
+  line-height: 1.6;
+}
 
 #school-list ul li {
   display: inline-block;
@@ -285,6 +312,10 @@ section h2 {
   padding-left: 32px;
   font-size: 1.3em;
   font-weight: 800;
+  color: #595656 !important;
+}
+
+#school-list ul li .tel a {
   color: #595656 !important;
 }
 
@@ -343,6 +374,17 @@ section h2 {
   bottom: 0;
 }
 
+#schedule span.close {
+  background: transparent url('../img/close.svg') center center no-repeat;
+  display: block;
+  height: 48px;
+  width: 48px;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: -60px;
+}
+
 .show-modal {
   opacity: 1;
   visibility: visible;
@@ -374,9 +416,12 @@ section h2 {
   margin: 0;
   padding: 16px 0 16px 48px;
   display: inline-block;
-  background-image: url(../img/icn-tel-fill.png);
+  background-image: url('../img/icn-tel-fill.png');
   background-repeat: no-repeat;
   background-position: 8px center;
+}
+.school-schedule .tel a {
+  color: #595656 !important;
 }
 
 .school-schedule table {
@@ -427,9 +472,19 @@ section h2 {
 /* Extra small screens (iPhone SE...) */
 @media screen and (max-width: 359px) {
 
+  .buttons a {
+    background-color: #95D2DB;
+    border-bottom: 3px solid #88BBBF;
+    background-image: none !important;
+    padding: 16px 14px 13px 14px !important;
+  }
+  .point h2 img,
+  #school-list h2 img { display: none; }
+
   .point h3 {
     line-height: 1.5em;
   }
+  .point h3 img { display: none; }
 
   .point p {
     padding-left: 0;
@@ -478,10 +533,13 @@ and (min-width: 599px) and (max-width: 767px) {
     font-size: 0.9em;
     padding-left: 14%;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .point h3 {
     font-weight: 600;
     letter-spacing: 2px;
   }
+  .point h3 img { display: inline; }
   .point h3::before {
     content: "";
     width: 10%;
@@ -540,6 +598,9 @@ and (min-width: 599px) and (max-width: 767px) {
 
 @media screen and (min-width: 599px) and (max-width:679px) {
 
+  /* .point h3 img { display: inline; } */
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .school-schedule table { font-size: 1em; }
   .school-schedule table td {
     padding: 24px 8px;
@@ -565,6 +626,9 @@ and (min-width: 599px) and (max-width: 767px) {
 
 @media screen and (min-width: 680px) and (max-width: 767px) {
 
+  /* .point h3 img { display: inline; } */
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .school-name {
     width: 90%;
     padding: 16px 5% !important;
@@ -618,6 +682,14 @@ and (min-width: 599px) and (max-width: 767px) {
     letter-spacing: 3px;
   }
 
+  #school-list p {
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 2.2px;
+    line-height: 1.6;
+    margin-bottom: 48px;
+  }
+
   #school-list ul li {
     width: 23%;
     margin: 0 0.72% 32px;
@@ -631,9 +703,10 @@ and (min-width: 599px) and (max-width: 767px) {
     height: 280px;
     padding: 60px 4% 0;
   }
-
-  .point h2 span { color: #fdc44f; }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .point h3 { font-size: 1.4em; width: 70%; }
+  /* .point h3 img { display: inline; } */
   .point h3::before {
     min-height: 140px;
     margin-right: 3%;
@@ -692,6 +765,9 @@ and (min-width: 599px) and (max-width: 767px) {
   #school-list ul li {
     font-size: 0.9em;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
+  .point h3 img { display: inline; }
 }
 
 
