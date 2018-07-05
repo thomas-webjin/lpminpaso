@@ -194,11 +194,13 @@ footer .buttons {
   margin: 0 auto;
 }
 
-.hero-banner img {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
+.bx-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+}
+.bx-wrapper img {
+  width: 100% !important;
 }
 
 section {
@@ -561,12 +563,6 @@ and (min-width: 599px) and (max-width: 767px) {
     vertical-align: middle;
   }
 
-  .hero-banner img {
-    float: left;
-    display: inline;
-    width: 50%;
-  }
-
   section h2 {
     font-size: 2em;
     letter-spacing: 3px;
@@ -669,12 +665,6 @@ and (min-width: 599px) and (max-width: 767px) {
     display: inline-block;
     text-align: right !important;
     vertical-align: middle;
-  }
-
-  .hero-banner img {
-    float: left;
-    display: inline;
-    width: 50%;
   }
 
   section h2 {

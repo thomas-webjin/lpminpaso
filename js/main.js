@@ -31,3 +31,12 @@ window.addEventListener('touchstart', windowOnClick);
 // $(document).on('click', '.show-modal', function(){
 //     $(this).removeClass("show-modal");
 // });
+
+$(document).ready(function(){
+      $('.slider').bxSlider({
+        auto: true,
+        controls: false,
+        mode: "fade",
+        pager: false
+      });
+});
