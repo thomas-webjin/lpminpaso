@@ -24,7 +24,14 @@ function windowOnClick(event) {
 		event.target.className="modal";
     document.body.classList.remove("modal-open");
 	}
+  if(event.target.className=="close"){
+    var show_modal = document.getElementsByClassName('modal show-modal');
+  	document.getElementById(show_modal[0].id).className='modal';
+    document.body.classList.remove("modal-open");
+	}
 }
+
+
 window.addEventListener('click', windowOnClick);
 window.addEventListener('touchstart', windowOnClick);
 
@@ -37,6 +44,6 @@ $(document).ready(function(){
         auto: true,
         controls: false,
         mode: "fade",
-        pager: false
+        pager: true
       });
 });
