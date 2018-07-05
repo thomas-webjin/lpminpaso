@@ -130,7 +130,7 @@ header h1 {
 }
 header h1 a { text-align: center; }
 header h1 a span {
-  font-size: 0.4em;
+  font-size: 0.5em;
   font-weight: 400;
   color: #595656;
   text-align: center;
@@ -239,6 +239,7 @@ section h2 {
 }
 .point h3 span {
   color: #79D1B0;
+  font-size: 1.2em;
 }
 .point h3 img { display: none; }
 
