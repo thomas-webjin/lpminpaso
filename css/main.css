@@ -100,14 +100,18 @@ textarea {
 body {
   padding: 0;
   color: #595656;
+  font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", sans-serif;
 }
 
 body a { text-decoration: none; }
+body.modal-open {
+  overflow: hidden;
+}
 
 .inner-wrap {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .outer-wrap {
@@ -124,28 +128,46 @@ header h1 {
   width: 80%;
   margin: 16px auto;
 }
+header h1 a { text-align: center; }
+header h1 a span {
+  font-size: 0.5em;
+  font-weight: 400;
+  color: #595656;
+  text-align: center;
+  display: block;
+  letter-spacing: 2px;
+}
 
 .buttons { height: 50px; }
 
 .buttons a {
   border-radius: 2px;
-  padding: 8px 6px 6px;
+  padding: 16px 16px 13px;
   font-family: sans-serif;
   color: white;
   font-weight: 600;
-  font-size: 0.8em
+  font-size: 0.8em;
+  letter-spacing: 2px;
 }
 
-.buttons a:first-of-type,
 .buttons a:first-of-type {
   background-color: #EFB847;
   border-bottom: 3px solid #DDA650;
+  background-image: url('../img/icn-list.png');
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  padding-right: 40px;
 }
 
-.buttons a:last-of-type,
 .buttons a:last-of-type {
   background-color: #95D2DB;
   border-bottom: 3px solid #88BBBF;
+  background-image: url('../img/icn-map.png');
+  background-position: right 12px center;
+  background-repeat: no-repeat;
+  background-size: auto 24px;
+  padding-right: 40px;
 }
 
 header img, footer img {
@@ -173,27 +195,28 @@ footer .buttons {
   margin: 0 auto;
 }
 
-.hero-banner img {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  display: block;
+.bx-wrapper {
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+}
+.bx-wrapper img {
+  width: 100% !important;
 }
 
 section {
   clear: both;
-  font-family: sans-serif;
   margin: 0 auto;
 }
 
 section h2 {
   text-align: center;
   padding-bottom: 20px;
-  font-family: serif;
   font-size: 1.3em;
   font-weight: 600;
   border-bottom: 1px solid #79D1B0;
-  margin-top: 40px;
+  margin-top: 60px;
+  font-family: serif;
 }
 
 .point {
@@ -205,13 +228,26 @@ section h2 {
 }
 
 .point p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding-left: 25%;
+  font-weight: 600;
 }
+.point h2 img,
+#school-list h2 img { display:none; }
 
+.point h2 span,
+#school-list h2 span {
+  background: linear-gradient(transparent 70%, #fdc44f 70%);
+  padding-bottom: 6px;
+}
 .point h3 {
   font-weight: 600;
 }
+.point h3 span {
+  color: #79D1B0;
+  font-size: 1.2em;
+}
+.point h3 img { display: none; }
 
 .point h3::before {
   content: "";
@@ -239,21 +275,27 @@ section h2 {
 
 #school-list ul {
   padding: 0;
-  margin: 0 -8px; /* -8px to fit on 360 wide phones */
+  margin: 0;
   list-style-type: none;
+  text-align: center;
+}
+
+#school-list > p {
+  text-align: center;
+  line-height: 1.6;
 }
 
 #school-list ul li {
   display: inline-block;
-  width: 45%;
-  margin: 0 2% 32px;
+  width: calc(45%);
+  margin: 0 1% 32px;
   font-size: 0.7em;
   vertical-align: top;
+  text-align: left;
 }
 
 #school-list ul li img {
   max-width: 100%;
-  margin-bottom: 16px;
 }
 
 #school-list ul li h3 {
@@ -279,6 +321,11 @@ section h2 {
   padding-left: 32px;
   font-size: 1.3em;
   font-weight: 800;
+  color: #595656 !important;
+}
+
+#school-list ul li .tel a {
+  color: #595656 !important;
 }
 
 #school-list ul li .email {
@@ -296,29 +343,79 @@ section h2 {
   background-position: left top;
 }
 
-#school-list ul li a {
+#school-list ul li p.trigger {
   background-color: #EFB847;
   padding: 8px 6px;
   border-radius: 3px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
+  font-family: sans-serif;
+  font-size: 1.1em;
   display: block;
   text-align: center;
+  text-decoration: none;
+  clear: both;
 }
 
 .school-info {
-  min-height: 110px;
+  min-height: 130px;
 }
+
+.school-info .email a,
+.school-info .address a {
+  color: #565959;
+}
+
+ .school-info .email a:hover,
+ .school-info .address a:hover {
+   color: #161919;
+ }
 
 #schedule {
   margin: 32px auto;
 }
 
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  position: fixed;
+  bottom: 0;
+}
+
+#schedule span.close {
+  background: transparent url('../img/icn-close.svg') center center no-repeat;
+  display: block;
+  height: 40px;
+  width: 40px;
+  background-size: contain;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 .school-schedule {
   background-color: #F5F5F5;
   border-top: 4px solid #595656;
-  padding-bottom: 24px;
-  margin: 32px 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.12), 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
 }
 
 .school-schedule .school-name {
@@ -332,15 +429,18 @@ section h2 {
 }
 
 .school-schedule .tel {
-  color: #595656;
+  color: #595656 !important;
   font-weight: 800;
   font-size: 1em;
   margin: 0;
   padding: 16px 0 16px 48px;
   display: inline-block;
-  background-image: url(../img/icn-tel-fill.png);
+  background-image: url('../img/icn-tel-fill.png');
   background-repeat: no-repeat;
   background-position: 8px center;
+}
+.school-schedule .tel a {
+  color: #595656 !important;
 }
 
 .school-schedule table {
@@ -366,7 +466,7 @@ section h2 {
 
 .school-schedule figure {
   margin: 16px auto;
-  padding-top: 16px;
+  padding: 16px 0 0;
   border-top: 1px solid #95D2DB;
   width: 92%;
   font-size: 0.7em;
@@ -380,16 +480,8 @@ section h2 {
 
 .school-schedule figure .map-container iframe {
   border: none;
-  width: 50%;
-  display: inline-block;
-}
-
-.school-schedule figure .map-container > div {
-  display: inline-block;
-  width: 45%;
-  border: 1px solid #ddd;
-  margin: 0 auto;
-  text-align: center;
+  width: 100%;
+  display: block;
 }
 
 /* ==========================================================================
@@ -399,9 +491,19 @@ section h2 {
 /* Extra small screens (iPhone SE...) */
 @media screen and (max-width: 359px) {
 
+  .buttons a {
+    background-color: #95D2DB;
+    border-bottom: 3px solid #88BBBF;
+    background-image: none !important;
+    padding: 16px 14px 13px 14px !important;
+  }
+  .point h2 img,
+  #school-list h2 img { display: none; }
+
   .point h3 {
     line-height: 1.5em;
   }
+  .point h3 img { display: none; }
 
   .point p {
     padding-left: 0;
@@ -423,24 +525,44 @@ section h2 {
   }
   #school-list ul li a { clear: both; display: block; }
 
+  .modal-content {
+    position: fixed;
+    bottom: 0;
+  }
+  .school-schedule {
+    border-top: none;
+  }
+  .school-schedule figure {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
   .school-name {
     width: 100%;
-    padding: 16px 0 0 16px !important;
+    padding: 16px 0 16px 16px !important;
+    margin-bottom: 0 !important;
   }
 
 }
 
+/* Small Tablets (Nexus etc...) */
 @media screen
 and (min-width: 599px) and (max-width: 767px) {
+
+  .buttons a {
+    font-size: 1em;
+  }
 
   .point p {
     font-size: 0.9em;
     padding-left: 14%;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .point h3 {
     font-weight: 600;
     letter-spacing: 2px;
   }
+  .point h3 img { display: inline; }
   .point h3::before {
     content: "";
     width: 10%;
@@ -459,12 +581,7 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right;
-  }
-
-  .hero-banner img {
-    float: left;
-    display: inline;
-    width: 50%;
+    vertical-align: middle;
   }
 
   section h2 {
@@ -477,15 +594,32 @@ and (min-width: 599px) and (max-width: 767px) {
     margin: 0 1% 32px;
     font-size: 0.7em;
   }
-
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    bottom: auto; /* override bottom 0 from default styles */
+    transform: translate(-50%, -50%);
+  }
+  .school-schedule {
+    width: 480px;
+  }
   .school-name {
     width: calc(45% - 32px);
+    font-size: 1.2em !important;
+    text-align: center;
   }
 
 }
 
 @media screen and (min-width: 599px) and (max-width:679px) {
 
+  .buttons a {
+    font-size: 1em;
+  }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .school-schedule table { font-size: 1em; }
   .school-schedule table td {
     padding: 24px 8px;
@@ -497,18 +631,30 @@ and (min-width: 599px) and (max-width: 767px) {
   .map-container iframe {
     height: 100%;
   }
+  .buttons {
+    width: 65%;
+    display: inline-block;
+    text-align: right !important;
+    vertical-align: middle;
+  }
+  .school-name{
+    font-size: 1.2em !important;
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 680px) and (max-width: 767px) {
 
-  .school-schedule {
-  width: 48%;
-  display: inline-block;
-  margin: 0 0.75%;
+  .buttons a {
+    font-size: 1em;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .school-name {
     width: 90%;
     padding: 16px 5% !important;
+    font-size: 1.2em !important;
+    text-align: center;
   }
   .school-schedule table { font-size: 0.7em; }
   .school-schedule table td {
@@ -520,6 +666,12 @@ and (min-width: 599px) and (max-width: 767px) {
   }
   .map-container iframe {
     height: 100%;
+  }
+  .buttons {
+    width: 65%;
+    display: inline-block;
+    text-align: right !important;
+    vertical-align: middle;
   }
 
 }
@@ -536,18 +688,25 @@ and (min-width: 599px) and (max-width: 767px) {
   .buttons {
     width: 65%;
     display: inline-block;
-    text-align: right;
+    text-align: right !important;
+    vertical-align: middle;
   }
 
-  .hero-banner img {
-    float: left;
-    display: inline;
-    width: 50%;
+  .buttons a {
+    font-size: 1em;
   }
 
   section h2 {
     font-size: 2em;
     letter-spacing: 3px;
+  }
+
+  #school-list p {
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 2.2px;
+    line-height: 1.6;
+    margin-bottom: 48px;
   }
 
   #school-list ul li {
@@ -556,14 +715,17 @@ and (min-width: 599px) and (max-width: 767px) {
     font-size: 0.7em;
   }
   .school-info {
-    min-height: 140px;
+    min-height: 160px;
   }
 
   .point > section {
     height: 280px;
     padding: 60px 4% 0;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
   .point h3 { font-size: 1.4em; width: 70%; }
+  /* .point h3 img { display: inline; } */
   .point h3::before {
     min-height: 140px;
     margin-right: 3%;
@@ -587,15 +749,22 @@ and (min-width: 599px) and (max-width: 767px) {
     background: transparent url('../img/point-03-img.jpg') right 4% center no-repeat;
     background-size: 30%;
   }
-
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    bottom: auto; /* override bottom 0 from default styles */
+    transform: translate(-50%, -50%);
+  }
   .school-schedule {
-  width: 48%;
-  display: inline-block;
-  margin: 0 0.75%;
+    width: 480px;
   }
   .school-name {
     width: 36%;
     padding: 16px 16px;
+    font-size: 1.2em !important;
+    text-align: center;
   }
   .school-schedule table { font-size: 1em; }
   .school-schedule table td {
@@ -615,6 +784,9 @@ and (min-width: 599px) and (max-width: 767px) {
   #school-list ul li {
     font-size: 0.9em;
   }
+  .point h2 img,
+  #school-list h2 img { position: relative; left: -8px; display: inline;}
+  .point h3 img { display: inline; }
 }
 
 
@@ -627,7 +799,7 @@ and (min-width: 599px) and (max-width: 767px) {
  */
 
 .hidden {
-    display: none !important;
+    visibility: hidden !important;
 }
 
 /*

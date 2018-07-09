@@ -12,6 +12,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 </head>
 
 <body>
@@ -22,206 +23,728 @@
   <!-- Add your site or application content here -->
 
   <header class="outer-wrap">
-    <h1><a href="#" title="みんなのパソコン倶楽部"><img src="img/logo.png" alt="みんなのパソコン倶楽部" width="" height="" /></a></h1>
+    <h1><a href="#" title="みんなのパソコン倶楽部"><span>個別指導型パソコン教室</span><img src="img/logo.png" alt="みんなのパソコン倶楽部"   /></a></h1>
     <div class="buttons">
-      <a href="#" title="無料説明会予約">無料説明会予約</a>
-      <a href="#" title="お近くの教室を探す">お近くの教室を探す</a>
+      <a href="#anchor" title="無料説明会予約">無料説明会予約</a>
+      <a href="#anchor" title="お近くの教室を探す">お近くの教室を探す</a>
     </div>
   </header>
 
-  <div class="hero-banner">
-    <img src="img/hero1.png" alt="だれでも！いますぐ！かんたんに！はじめられるパソコン教室。全国135教室以上展開・東証一部上場企業運営初心者中高年主婦の方ぜひ！安心の月謝制" width="" height="" />
-    <img src="img/hero2.jpg" alt="" width="" height="" />
+  <!-- <div class="hero-banner">
+    <img src="img/hero1.png" alt="だれでも！いますぐ！かんたんに！はじめられるパソコン教室。全国135教室以上展開・東証一部上場企業運営初心者中高年主婦の方ぜひ！安心の月謝制"   />
+    <img src="img/hero2.jpg" alt=""   />
+  </div> -->
+
+  <div class="slider hero-banner">
+    <div><img src="img/hero1.jpg" alt="だれでも！いますぐ！かんたんに！はじめられるパソコン教室。全国135教室以上展開・東証一部上場企業運営初心者中高年主婦の方ぜひ！安心の月謝制"   /></div>
+    <div><img src="img/hero2.jpg" alt="お店の売上や家計をデータ管理！"   /></div>
+    <div><img src="img/hero3.jpg" alt="スマホやタブレットでお孫さんと楽しく！"   /></div>
+    <div><img src="img/hero4.jpg" alt="旅行の写真をアルバムに整理！"   /></div>
+    <div><img src="img/hero5.jpg" alt="もらって嬉しいオリジナルハガキ作成講座!"   /></div>
   </div>
 
   <section class="clearfix point">
-    <h2>みんなのパソコン倶楽部とは？</h2>
+    <h2><img src="img/minpaso.png" alt="アイコン" height="72" /><span>みんなのパソコン倶楽部とは？</span></h2>
     <section class="point01 inner-wrap">
-      <h3>だれでも、いますぐ、簡単に始められます！</h3>
+      <h3><span>だれでも</span>、<span>いますぐ</span>、<span>簡単</span>に始められます！<img src="img/point01.png" alt="アイコン" height="60"/></h3>
       <p>無料説明会に参加してみる。お近くの教室で体験してみる。思い立ったらすぐ、簡単にスタートできます。初心者の方も多く、また中高年、主婦など様々な生徒さんが通っていますので、どなたでもお気軽にご参加いただけます。</p>
     </section>
     <section class="point02 inner-wrap">
-      <h3>自由でフレキシブルな時間割りです！</h3>
-      <p>やりたいことやお好きなプログラムをカリキュラムから選んで、自由に時間割りを設定！また、ご自身のスペースに合わせて、プログラムの振り替え〇〇や追加〇〇もフレキシブルにできます。</p>
+      <h3><span>自由</span>で<span>柔軟な</span>な時間割りです！<img src="img/point02.png" alt="アイコン" height="60"/></h3>
+      <p>やりたいことやお好きなプログラムをカリキュラムから選んで、自由に時間割りを設定！また、ご自身のペースに合わせて、プログラムの振り替え受講や追加受講も柔軟なにできます。</p>
     </section>
     <section class="point03 inner-wrap">
-      <h3>スマートフォンやタブレットを使いこなせます！</h3>
-      <p>お孫さんとやりとりしたり、写真を撮影して家族に送ったり、インターネットで調べ物をしたり・・・生活がもっと楽しくなるスマホやタブレットの使い方も身につきます。</p>
+      <h3><span>スマートフォン</span>や<span>タブレット</span>を使いこなせます！<img src="img/point03.png" alt="アイコン" height="60"/></h3>
+      <p>お孫さんとLINEでやりとりしたり、写真を撮影して家族に送ったり、インターネットで調べ物をしたり・・・。生活がもっと楽しくなるスマホやタブレットの使い方も身につきます。</p>
     </section>
   </section>
 
-  <section id="school-list" class="inner-wrap">
-    <h2>まずは無料説明会へご参加下さい！</h2>
-    <p>説明会の所要時間は50分程度です。お近くの会場でいずれかの日時にご参加下さい。下記の日程でご都合が合わない方も日程調整いたしますので、各教室にお気軽にお電話下さい。</p>
+  <section id="school-list">
+    <h2 id="anchor"><img src="img/setumei.png" alt="アイコン" height="72" /><span>各教室で無料説明会実施中！</span></h2>
+    <div class="inner-wrap">
+    <p>みんなのパソコン倶楽部は、現在12教室で展開中！お近くの教室及び説明会会場でいずれかの日時にご参加ください。まずはお近くの教室までお気軽にお電話でお問合せください！</p>
     <ul>
       <li>
         <h3>横浜戸部駅前<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">045-620-4610</span>
-          <span class="email">0001@user.minpaso.jp</span>
-          <span class="address">横浜市西区戸部本町32-10</span>
+          <span class="tel"><a href="tel:+81-45-620-4610">045-620-4610</a></span>
+          <span class="email"><a href="mailto:0001@user.minpaso.jp" title="メールを送る">0001@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('横浜市西区戸部本町32-10'));return false;" title="Googleマップを開く">横浜市西区戸部本町32-10</a></span>
         </div>
-        <img src="img/kyoshitsu01.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu01.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-one" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
-        <h3>〇〇駅前<small>教室</small></h3>
+        <h3>蕨駅前<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">048-229−3231</span>
-          <span class="email">0002@user.minpaso.jp</span>
-          <span class="address">埼玉県〇〇市中央3丁目14-15 〇〇駅前郵便局２F</span>
+          <span class="tel"><a href="tel:+81-48-229-3241">048-229-3241</a></span>
+          <span class="email"><a href="mailto:0002@user.minpaso.jp" title="メールを送る">0002@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('埼玉県蕨市中央3-14-15'));return false;" title="Googleマップを開く">埼玉県蕨市中央3-14-15 蕨駅前郵便局２F</a></span>
         </div>
-        <img src="img/kyoshitsu02.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu02.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-two" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
         <h3>小滝橋<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">03-5989-1170</span>
-          <span class="email">0003@user.minpaso.jp</span>
-          <span class="address">東京都新宿区高田馬場4-41-9</span>
+          <span class="tel"><a href="tel:+81-3-5989-1170">03-5989-1170</a></span>
+          <span class="email"><a href="mailto:0003@user.minpaso.jp" title="メールを送る">0003@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都新宿区高田馬場4-41-9'));return false;" title="Googleマップを開く">東京都新宿区高田馬場4-41-9</a></span>
         </div>
-        <img src="img/kyoshitsu03.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu03.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-three" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
         <h3>学芸大学駅前<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">03-6451-0117</span>
-          <span class="email">0004@user.minpaso.jp</span>
-          <span class="address">東京都目黒区鷹番2-20-17-403 号室</span>
+          <span class="tel"><a href="tel:+81-3-6451-0117">03-6451-0117</a></span>
+          <span class="email"><a href="mailto:0004@user.minpaso.jp" title="メールを送る">0004@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都目黒区鷹番2-20-17'));return false;" title="Googleマップを開く">東京都目黒区鷹番2-20-17-403 号室</a></span>
         </div>
-        <img src="img/kyoshitsu04.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu04.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-four" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
 
       <li>
         <h3>雪が谷<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">03-6421-8480</span>
-          <span class="email">0005@user.minpaso.jp</span>
-          <span class="address">東京都大田区北〇〇町3-23 オリビアガーデン 202</span>
+          <span class="tel"><a href="tel:+81-3-6421-8480">03-6421-8480</a></span>
+          <span class="email"><a href="mailto:0005@user.minpaso.jp" title="メールを送る">0005@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都大田区北嶺町3-23'));return false;" title="Googleマップを開く">東京都大田区北嶺町3-23 オリビアガーデン 202</a></span>
         </div>
-        <img src="img/kyoshitsu05.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu05.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-five" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
         <h3>与野本町<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">048-767-4200</span>
-          <span class="email">0006@user.minpaso.jp</span>
-          <span class="address">埼玉県さいたま市中央区本町東2-12-4 チェリーハイツ１F 東側</span>
+          <span class="tel"><a href="tel:+81-48-767-4200">048-767-4200</a></span>
+          <span class="email"><a href="mailto:0006@user.minpaso.jp" title="メールを送る">0006@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('埼玉県さいたま市中央区本町東2-12-4'));return false;" title="Googleマップを開く">埼玉県さいたま市中央区本町東2-12-4</a> チェリーハイツ１F 東側</span>
         </div>
-        <img src="img/kyoshitsu06.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu06.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-six" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
-        <h3>〇〇<small>教室</small></h3>
+        <h3>祖師谷<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">03-5787-7550</span>
-          <span class="email">0007@user.minpaso.jp</span>
-          <span class="address">東京都世田谷区〇〇4-23-21</span>
+          <span class="tel"><a href="tel:+81-3-5787-7550">03-5787-7550</a></span>
+          <span class="email"><a href="mailto:0007@user.minpaso.jp" title="メールを送る">0007@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都世田谷区祖師谷4-23-21'));return false;" title="Googleマップを開く">東京都世田谷区祖師谷4-23-21</a></span>
         </div>
-        <img src="img/kyoshitsu07.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu07.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-seven" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
       <li>
         <h3>中山<small>教室</small></h3>
         <div class="school-info">
-          <span class="tel">045-482-7544</span>
-          <span class="email">0008@user.minpaso.jp</span>
-          <span class="address">神奈川県横浜市緑区三保町2157-3</span>
+          <span class="tel"><a href="tel:+81-5-482-7544">045-482-7544</a></span>
+          <span class="email"><a href="mailto:0008@user.minpaso.jp" title="メールを送る">0008@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('神奈川県横浜市緑区三保町2157-3'));return false;" title="Googleマップを開く">神奈川県横浜市緑区三保町2157-3</a></span>
         </div>
-        <img src="img/kyoshitsu08.jpg" alt="" width="" height="" />
-        <a href="" title="説明会はこちら">＞ 説明会はこちら</a>
+        <img src="img/kyoshitsu08.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-eight" title="説明会はこちら">＞ 説明会はこちら</p>
+      </li>
+      <li>
+        <h3>三ノ輪<small>教室</small></h3>
+        <div class="school-info">
+          <span class="tel"><a href="tel:+81-03-5604-5770">03-5604-5770</a></span>
+          <span class="email"><a href="mailto:0009@user.minpaso.jp" title="メールを送る">0009@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都荒川区南千住2-17-12'));return false;" title="Googleマップを開く">東京都荒川区南千住2-17-12</a></span>
+        </div>
+        <img src="img/kyoshitsu09.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-nine" title="説明会はこちら">＞ 説明会はこちら</p>
+      </li>
+      <li>
+        <h3>椎名町<small>教室</small></h3>
+        <div class="school-info">
+          <span class="tel"><a href="tel:+81-3-5926-7799">03-5926-7799</a></span>
+          <span class="email"><a href="mailto:0010@user.minpaso.jp" title="メールを送る">0010@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都豊島区西池袋4-28-13'));return false;" title="Googleマップを開く">東京都豊島区西池袋4-28-13パークサイド西池101</a></span>
+        </div>
+        <img src="img/kyoshitsu10.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-ten" title="説明会はこちら">＞ 説明会はこちら</p>
+      </li>
+      <li>
+        <h3>高円寺<small>教室</small></h3>
+        <div class="school-info">
+          <span class="tel"><a href="tel:+81-3-5942-8123">03-5942-8123</a></span>
+          <span class="email"><a href="mailto:0011@user.minpaso.jp" title="メールを送る">0011@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('東京都杉並区高円寺北1-3-5'));return false;" title="Googleマップを開く">東京都杉並区高円寺北1-3-5</a></span>
+        </div>
+        <img src="img/kyoshitsu11.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-eleven" title="説明会はこちら">＞ 説明会はこちら</p>
+      </li>
+      <li>
+        <h3>イオン本牧<small>教室</small></h3>
+        <div class="school-info">
+          <span class="tel"><a href="tel:+81-45-263-6633">045-263-6633</a></span>
+          <span class="email"><a href="mailto:0012@user.minpaso.jp" title="メールを送る">0012@user.minpaso.jp</a></span>
+          <span class="address"><a href="javascript:;" onclick="window.open('http://maps.google.co.jp/maps?q='+encodeURI('神奈川県横浜市中区本牧原7-1'));return false;" title="Googleマップを開く">神奈川県横浜市中区本牧原7-1イオン本牧3号館</a></span>
+        </div>
+        <img src="img/kyoshitsu12.jpg" alt=""   />
+        <p class="trigger" data-modal="modal-twelve" title="説明会はこちら">＞ 説明会はこちら</p>
       </li>
     </ul>
+    </div>
   </section>
 
-  <div id="schedule" class="inner-wrap">
+  <div id="schedule">
+    <!-- 横浜戸部駅前教室 -->
 
-    <section class="school-schedule">
+    <div class="modal" id="modal-one">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
       <div>
-      <span class="school-name">横浜戸部駅前<small>教室</small></span><span class="tel">045-620-4610</span>
+      <span class="school-name">横浜戸部駅前<small>教室</small></span>
+      <span class="tel"><a href="tel:+81-45-620-4610">045-620-4610</a></span>
+      </div>
       <table><tbody>
         <tr>
-          <th>日</th>
+          <th>日時</th>
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/15（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/16（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/18（水）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
         </tr>
       </tbody></table>
       <figure>
         <figcaption>〒220-0041 神奈川県横浜市西区戸部本町32-10</figcaption>
         <div class="map-container">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.9202417455926!2d139.61806271467958!3d35.45676894985781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c6e1af5c713%3A0x1ad281a04ee56d7e!2s32-10+Tobehonch%C5%8D%2C+Nishi-ku%2C+Yokohama-shi%2C+Kanagawa-ken+220-0041!5e0!3m2!1sen!2sjp!4v1521783784433" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <div>イベント更新情報</div>
         </div>
       </figure>
     </section>
-
-    <section class="school-schedule">
+    </div>
+    <!-- 蕨駅前教室 -->
+    <div class="modal" id="modal-two">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
       <div>
-        <span class="school-name">〇〇駅前<small>教室</small></span><span class="tel">048-229−3231</span>
+        <span class="school-name">蕨駅前<small>教室</small></span>
+        <span class="tel"><a href="tel:+81-48-229-3241">048-229-3241</a></span>
       </div>
       <table>
         <tr>
-          <th>日</th>
+          <th>日時</th>
           <th>❶</th>
           <th>❷</th>
           <th>❸</th>
+          <th>❹</th>
         </tr>
         <tr>
-          <td>6/29<small>（金）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/27（金）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
         </tr>
         <tr>
-          <td>6/30<small>（土）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/28（土）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
         </tr>
         <tr>
-          <td>7/3<small>（火）</small></td>
-          <td><small>AM</small>10:30</td>
-          <td><small>PM</small>2:00</td>
-          <td><small>PM</small>3:30</td>
+          <td>7/31（火）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
         </tr>
       </table>
       <figure>
-        <figcaption>〒335-0004 埼玉県〇〇市中央3丁目14-15</figcaption>
+        <figcaption>〒335-0000 埼玉県蕨市中央３丁目１４−１５蕨駅前郵便局２F</figcaption>
         <div class="map-container">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.849021076143!2d139.68498521492904!3d35.828179829506794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018eb320c896c0d%3A0x4f09490fda50946f!2s3+Chome-14-15+Ch%C5%AB%C5%8D%2C+Warabi-shi%2C+Saitama-ken+335-0004!5e0!3m2!1sen!2sjp!4v1528173618421" frameborder="0" style="border:0" allowfullscreen></iframe>
-          <div>イベント更新情報</div>
         </div>
       </figure>
     </section>
+    </div>
+    <!-- 小滝橋教室 -->
+    <div class="modal" id="modal-three">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">小滝橋<small>教室</small></span>
+        <span class="tel"><a href="tel:+81-3-5989-1170">03-5989-1170</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/22（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/23（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>7/25（水）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒169-0075 東京都新宿区高田馬場4-41-9</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.6747717644507!2d139.69224711468712!3d35.7096201360231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d344e44653d%3A0xac528ff1f64bd660!2s4+Chome-41-9+Takadanobaba%2C+Shinjuku-ku%2C+T%C5%8Dky%C5%8D-to+169-0075!5e0!3m2!1sen!2sjp!4v1521783886470" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 学芸大学駅前教室 -->
+    <div class="modal" id="modal-four">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">学芸大学駅前<small>教室</small></span>
+        <span class="tel"><a href="tel:+81-3-6451-0117">03-6451-0117</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/26（木）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/29（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/30（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒152-0004 東京都目黒区鷹番2-20-17-403号室</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.9159361607963!2d139.68404487919008!3d35.62979884049629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f4cc21cfc6a1%3A0x1f769a635e13063!2s2+Chome-20-17+Takaban%2C+Meguro-ku%2C+T%C5%8Dky%C5%8D-to+152-0004!5e0!3m2!1sen!2sjp!4v1528080295973" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 雪が谷教室 -->
+    <div class="modal" id="modal-five">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">雪が谷<small>教室</small></span><span class="tel"><a href="tel:+81-3-6421-8480">03-6421-8480</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/5（木）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>7/8（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/9（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒145-0073 東京都大田区北嶺町3-23 オリビアガーデン202</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3244.572461595322!2d139.6786920149225!3d35.58894304263592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f54561f67bdd%3A0x6eb903200ff0db37!2s3-23+Kitaminemachi%2C+%C5%8Cta-ku%2C+T%C5%8Dky%C5%8D-to+145-0073!5e0!3m2!1sen!2sjp!4v1528173704340" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 与野本町教室 -->
+    <div class="modal" id="modal-six">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">与野本町<small>教室</small></span>
+        <span class="tel"><a href="tel:+81-48-767-4200">048-767-4200</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/12（木）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/15（日）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/16（月）</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒338-0003 埼玉県さいたま市中央区本町東2-12-4 チェリーハイツ１F東側</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3232.680552077809!2d139.61955287919747!3d35.8813445266766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018c19cf2235989%3A0x5c86b7deb598b079!2s2+Chome-12-4+Honmachihigashi%2C+Ch%C5%AB%C5%8D-ku%2C+Saitama-shi%2C+Saitama-ken+338-0003!5e0!3m2!1sen!2sjp!4v1528080469567" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 祖師谷教室 -->
+    <div class="modal" id="modal-seven">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">祖師谷<small>教室</small></span><span class="tel"><a href="tel:+81-3-5787-7550">03-5787-7550</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/29（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/30（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>8/1（水）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒157-0072 東京都世田谷区祖師谷4-23-21</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.177632473688!2d139.60598157919077!3d35.64799493949922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f162f4bbe163%3A0xddbb46a9d1d21567!2s4+Chome-23-21+Soshigaya%2C+Setagaya-ku%2C+T%C5%8Dky%C5%8D-to+157-0072!5e0!3m2!1sen!2sjp!4v1528080521682" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 中山教室 -->
+    <div class="modal" id="modal-eight">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">中山<small>教室</small></span><span class="tel"><a href="tel:+81-45-482-7544">045-482-7544</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/8（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/9（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/11（水）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒226-0015 神奈川県横浜市緑区三保町2157-3
+        </figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.5167952982974!2d139.53276427918675!3d35.516224646708864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185806ed69da1f%3A0x60fddad5300f98c4!2s2157-3+Mihoch%C5%8D%2C+Midori-ku%2C+Yokohama-shi%2C+Kanagawa-ken+226-0015!5e0!3m2!1sen!2sjp!4v1528080577856" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 三ノ輪 -->
+    <div class="modal" id="modal-nine">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">三ノ輪<small>教室</small></span><span class="tel"><a href="tel:+81-03-5604-5770">03-5604-5770</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/19（木）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/22（日）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/23（月）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒116-0003 東京都荒川区南千住2-17-12</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8667746808937!2d139.79367981526022!3d35.72949488018311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ef378014ed9%3A0xfcdd693c82adcf46!2z44CSMTE2LTAwMDMg5p2x5Lqs6YO96I2S5bed5Yy65Y2X5Y2D5L2P77yS5LiB55uu77yR77yX4oiS77yR77yS!5e0!3m2!1sja!2sjp!4v1530683194048" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 椎名町 -->
+    <div class="modal" id="modal-ten">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">椎名町<small>教室</small></span><span class="tel"><a href="tel:+81-3-5926-7799">03-5926-7799</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/6（金）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>7/7（土）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/10（火）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒171-0021 東京都豊島区西池袋4-28-13パークサイド西池101</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.952458008876!2d139.69684291470512!3d35.72738773504775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d50d7696a57%3A0x9f379ed48b9b5da0!2z44CSMTcxLTAwMjEg5p2x5Lqs6YO96LGK5bO25Yy66KW_5rGg6KKL77yU5LiB55uu77yS77yY4oiS77yR77yT!5e0!3m2!1sja!2sjp!4v1530683266462" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- 高円寺 -->
+    <div class="modal" id="modal-eleven">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">高円寺<small>教室</small></span><span class="tel"><a href="tel:+81-3-5942-8123">03-5942-8123</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/13（金）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>7/14（土）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/17（火）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒166-0002 東京都杉並区高円寺北1-3-5</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.8390615961753!2d139.65346951470445!3d35.705577836244785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f28f53f523f1%3A0xa84e893dad7c78c3!2z44CSMTY2LTAwMDIg5p2x5Lqs6YO95p2J5Lim5Yy66auY5YaG5a-65YyX77yR5LiB55uu77yT4oiS77yV!5e0!3m2!1sja!2sjp!4v1530683298753" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+    <!-- イオン本牧 -->
+    <div class="modal" id="modal-twelve">
+    <section class="school-schedule modal-content">
+      <span class="close">&nbsp;</span>
+      <div>
+        <span class="school-name">イオン本牧<small>教室</small></span>
+        <span class="tel"><a href="tel:+81-45-263-6633">045-263-6633</a></span>
+      </div>
+      <table>
+        <tr>
+          <th>日時</th>
+          <th>❶</th>
+          <th>❷</th>
+          <th>❸</th>
+          <th>❹</th>
+        </tr>
+        <tr>
+          <td>7/27（金）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>19:00~</td>
+        </tr>
+        <tr>
+          <td>7/28（土）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+        <tr>
+          <td>7/31（火）</td>
+          <td>10:30~</td>
+          <td>14:00~</td>
+          <td>15:30~</td>
+          <td>×</td>
+        </tr>
+      </table>
+      <figure>
+        <figcaption>〒231-0821 神奈川県横浜市中区本牧原7-1イオン本牧3号館</figcaption>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.1826022643168!2d139.6648823146961!3d35.425506351562525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601842cb35cc6645%3A0x97b8743516126e46!2z44Kk44Kq44Oz5pys54mn5bqX!5e0!3m2!1sja!2sjp!4v1530683388963" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </figure>
+    </section>
+    </div>
+  </div>
 
   <footer>
-    <a href="#" title="みんなのパソコン倶楽部"><img src="img/logo.png" alt="みんなのパソコン倶楽部" width="" height="" /></a>
+    <a href="#" title="みんなのパソコン倶楽部"><img src="img/logo.png" alt="みんなのパソコン倶楽部"   /></a>
     <div class="buttons">
-      <a href="#" title="無料説明会予約">無料説明会予約</a>
-      <a href="#" title="お近くの教室を探す">お近くの教室を探す</a>
+      <a href="#anchor" title="無料説明会予約">無料説明会予約</a>
+      <a href="#anchor" title="お近くの教室を探す">お近くの教室を探す</a>
     </div>
   </footer>
 
@@ -230,6 +753,7 @@
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
@@ -238,7 +762,6 @@
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-  </div>
 </body>
 
 </html>
