@@ -130,8 +130,8 @@ header h1 {
 }
 header h1 a { text-align: center; }
 header h1 a span {
-  font-size: 0.5em;
-  font-weight: 400;
+  font-size: 0.6em;
+  font-weight: 600;
   color: #595656;
   text-align: center;
   display: block;
@@ -175,7 +175,9 @@ header img, footer img {
 }
 
 footer {
-  padding: 0;
+  padding: 32px 0 0;
+  border-top: 1px solid #79D1B0;
+  /* background-color: #F5F5F5; */
 }
 
 footer > a {
@@ -277,7 +279,7 @@ section h2 {
   padding: 0;
   margin: 0;
   list-style-type: none;
-  text-align: center;
+  /* text-align: center; */
 }
 
 #school-list > p {
@@ -469,7 +471,7 @@ section h2 {
   padding: 16px 0 0;
   border-top: 1px solid #95D2DB;
   width: 92%;
-  font-size: 0.7em;
+  font-size: 1em;
 }
 
 .school-schedule figure .map-container {
@@ -689,7 +691,6 @@ and (min-width: 599px) and (max-width: 767px) {
     width: 65%;
     display: inline-block;
     text-align: right !important;
-    vertical-align: middle;
   }
 
   .buttons a {
@@ -707,6 +708,7 @@ and (min-width: 599px) and (max-width: 767px) {
     letter-spacing: 2.2px;
     line-height: 1.6;
     margin-bottom: 48px;
+    font-weight: 600;
   }
 
   #school-list ul li {
@@ -719,7 +721,7 @@ and (min-width: 599px) and (max-width: 767px) {
   }
 
   .point > section {
-    height: 280px;
+    min-height: 280px;
     padding: 60px 4% 0;
   }
   .point h2 img,
@@ -731,7 +733,7 @@ and (min-width: 599px) and (max-width: 767px) {
     margin-right: 3%;
   }
   .point p {
-    font-size: 1.2em !important;
+    font-size: 1.4em !important;
     width: 50%;
     padding-left: 16%;
     letter-spacing: 1.5px;
