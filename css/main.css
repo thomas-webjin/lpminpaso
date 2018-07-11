@@ -486,6 +486,48 @@ section h2 {
   display: block;
 }
 
+/* FORM STYLES */
+form {
+  max-width: 500px;
+  margin: 0 auto 80px;
+  padding: 0 5%;
+}
+form select {
+  width: 170px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+}
+
+form input[type=text],
+form input[type=tel],
+form input[type=email],
+form input[type=date] {
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 5px 8px;
+  width: 90%;
+}
+
+form textarea {
+  line-height: 1.5;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  padding: 5px 8px;
+  width: 90%;
+}
+
+form input[type=submit] {
+  padding: 10px 14px;
+  border-radius: 3px;
+  border: none;
+  background-color: navy;
+  color: white;
+  font-weight: bold;
+}
+
 /* ==========================================================================
    Media queries
    ========================================================================== */
