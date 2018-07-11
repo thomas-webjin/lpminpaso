@@ -1,3 +1,24 @@
+function changeSlider() {
+    if (window.innerWidth < 600) {
+        $('.bx-wrapper:has(.slider)').hide();
+        $('.bx-wrapper:has(.slider-mobile)').show();
+    } else {
+        $('.bx-wrapper:has(.slider)').show();
+        $('.bx-wrapper:has(.slider-mobile)').hide();
+    }
+}
+
+$(document).ready(function () {
+    var slider = $('.hero-banner').bxSlider({
+        onSliderLoad: changeSlider,
+        onSliderResize: changeSlider,
+        auto: true,
+        controls: false,
+        mode: "fade",
+        pager: true
+    });
+});
+
 // Modal for class room details
 
 var btn = document.getElementsByClassName("trigger");
@@ -39,11 +60,12 @@ window.addEventListener('touchstart', windowOnClick);
 //     $(this).removeClass("show-modal");
 // });
 
-$(document).ready(function(){
-      $('.slider').bxSlider({
-        auto: true,
-        controls: false,
-        mode: "fade",
-        pager: true
-      });
-});
+
+// $(document).ready(function(){
+//       $('.slider').bxSlider({
+//         auto: true,
+//         controls: false,
+//         mode: "fade",
+//         pager: true
+//       });
+// });
