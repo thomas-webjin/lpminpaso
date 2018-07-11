@@ -39,36 +39,11 @@ window.addEventListener('touchstart', windowOnClick);
 //     $(this).removeClass("show-modal");
 // });
 
-
 $(document).ready(function(){
       $('.slider').bxSlider({
         auto: true,
         controls: false,
-		adaptiveHeight: true,
         mode: "fade",
         pager: true
-			
       });
 });
-
-
-$(window).on('load resize', function () {
-    sp_process();
-});
-$('img[data-sp-src]').each(function () {
-    $(this).attr('data-pc-src', $(this).attr('src'));
-});
-function sp_process() {
-    var win_w = $(window).innerWidth();
-    if (win_w < 768) {
-        $('img[data-sp-src]').each(function () {
-            $(this).attr('src', $(this).attr('data-sp-src'));
-        });
-    } else {
-        $('img[data-sp-src]').each(function () {
-            $(this).attr('src', $(this).attr('data-pc-src'));
-        });
-    }
-}
-
-
