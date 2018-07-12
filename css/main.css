@@ -490,10 +490,34 @@ section h2 {
 form {
   max-width: 500px;
   margin: 0 auto 80px;
-  padding: 0 5%;
+  padding: 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.1);
 }
+form label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form p {
+  padding: 10px 16px 18px;
+  border: none;
+}
+
+form p.alt-color {
+  background-color: #F5F5F5;
+}
+form p.center {
+  text-align: center;
+}
+form p.submit {
+  margin-top: 0 !important;
+}
+
 form select {
-  width: 170px;
+  width: 190px;
   padding: 5px 35px 5px 5px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -523,9 +547,25 @@ form input[type=submit] {
   padding: 10px 14px;
   border-radius: 3px;
   border: none;
-  background-color: navy;
+  background-color: #EFB847;
   color: white;
   font-weight: bold;
+}
+
+.menu-date select {
+  width: 100px;
+}
+
+form span.required {
+  display: inline-block;
+  padding: 2px 3px;
+  margin-left: 8px;
+  background-color: red;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.75em;
+  opacity: 0.8;
+  border: none;
 }
 
 /* ==========================================================================
