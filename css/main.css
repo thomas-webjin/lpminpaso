@@ -358,6 +358,10 @@ section h2 {
   text-decoration: none;
   clear: both;
 }
+#school-list ul li p.trigger:hover {
+  cursor: pointer;
+  background-color: #e0aa3a;
+}
 
 .school-info {
   min-height: 130px;
@@ -507,13 +511,22 @@ form p {
 }
 
 form p.alt-color {
-  background-color: #F5F5F5;
+  /* background-color: #F5F5F5; */
+  background-color: #fff4dd;
 }
 form p.center {
   text-align: center;
 }
 form p.submit {
   margin-top: 0 !important;
+}
+
+form p.separator {
+  border-top: 1px solid #eee;
+  padding: 10px 16px 0px;
+  margin-top: 0;
+  font-weight: bold;
+  text-align: center;
 }
 
 form select {
