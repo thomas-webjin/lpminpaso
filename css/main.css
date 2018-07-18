@@ -492,12 +492,13 @@ section h2 {
 
 /* FORM STYLES */
 form {
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto 80px;
   padding: 0;
   border: 1px solid #DDDDDD;
   border-radius: 8px;
   box-shadow: 0 1px 8px rgba(0,0,0,0.1);
+  background-color: #e5efe9;
 }
 form label {
   display: inline-block;
@@ -522,7 +523,7 @@ form p.submit {
 }
 
 form p.separator {
-  border-top: 1px solid #eee;
+  border-top: 1px solid #bfd4c8;
   padding: 10px 16px 0px;
   margin-top: 0;
   font-weight: bold;
@@ -873,6 +874,13 @@ and (min-width: 599px) and (max-width: 767px) {
   }
   .map-container iframe {
     height: 100%;
+  }
+
+  form {
+    font-size: 1.2em;
+  }
+  form input[type=text] {
+    padding: 8px 12px;
   }
 
 }
