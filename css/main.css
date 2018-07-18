@@ -495,10 +495,10 @@ form {
   max-width: 100%;
   margin: 0 auto 80px;
   padding: 0;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #e2e2e2;
   border-radius: 8px;
   box-shadow: 0 1px 8px rgba(0,0,0,0.1);
-  /* background-color: #e5efe9; */
+  background-color: #f7f7f7;
 }
 form label {
   display: inline-block;
@@ -512,7 +512,7 @@ form p {
 }
 
 form p.alt-color {
-  background-color: #F5F5F5;
+  background-color: #e4e4e4;
   /* background-color: #fff4dd; */
 }
 form p.center {
@@ -560,10 +560,11 @@ form textarea {
 form input[type=submit] {
   padding: 10px 14px;
   border-radius: 3px;
-  border: none;
-  background-color: #EFB847;
+  border: 1px solid #ecb23b;
+  background-color: #fbbe41;
   color: white;
   font-weight: bold;
+  box-shadow: 0px 1px 8px rgba(0,0,0,0.1);
 }
 
 .menu-date select {
